@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Student Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!-- Element to display data -->
+    <h2 id="studentName"></h2>
+    <p id="studentClass"></p>
+    <p id="studentBranch"></p>
+    <p id="studentRoll"></p>
+
+    <script>
+
+        const students = [
+            {
+                name: "John",
+                class: "10th",
+                branch: "it",
+                "roll no": 123
+            },
+            {
+                name: "Doe",
+                class: "12th",
+                branch: "Commerce",
+                "roll no": 45
+            }
+        ];
+
+        // Access the first student
+        const student = students[0];
+
+        // Display data using getElementById
+        document.getElementById("studentName").innerText = "Name: " + student.name;
+        document.getElementById("studentClass").innerText = "Class: " + student.class;
+        document.getElementById("studentBranch").innerText = "Branch: " + student.branch;
+        document.getElementById("studentRoll").innerText = "Roll No: " + student["roll no"];
+    </script>
+</body>
+</html>
