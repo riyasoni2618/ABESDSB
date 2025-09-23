@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .div{
+        height: 400px;
+        width: 400px;
+        border: 2px solid ;
+    }
+    .nav{
+        display: flex;
+    }
+    .app{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;   
+    }
+    .imgi{
+        height: 200px;
+    }
+</style>
+<body>
+    
+    <div class="container">
+        <div class="div">
+            <div class="nav">
+                <div class="logo"> <img src="https://media.licdn.com/dms/image/v2/C510BAQGHhq9X-H8LyQ/company-logo_200_200/company-logo_200_200/0/1631345366169?e=2147483647&v=beta&t=8hq7Hhr_Vlu6uIXpTU9yv31n6jB0_zBzvuFqHmHGwlg" alt="" style="object-fit: cover; height: 100px;">
+                </div>
+                <h1>COUNTER APP</h1>
+            </div>
+            
+                <div class="app">
+                    <div id="div1">+</div>
+                    <div id="div2"><p id="p">0</p></div>
+                    <div id="div3">-</div>
+                </div>
+
+        </div>
+        <div class="div">
+                <div id="imgi">
+                     <img  id="img" src="https://media.licdn.com/dms/image/v2/C510BAQGHhq9X-H8LyQ/company-logo_200_200/company-logo_200_200/0/1631345366169?e=2147483647&v=beta&t=8hq7Hhr_Vlu6uIXpTU9yv31n6jB0_zBzvuFqHmHGwlg" alt="" style="object-fit: cover; height: 100px;">
+                </div>
+                <div id="hide">hide</div>
+        </div>
+        <div class="div">
+            <div ><img id="one" src="https://media.licdn.com/dms/image/v2/C510BAQGHhq9X-H8LyQ/company-logo_200_200/company-logo_200_200/0/1631345366169?e=2147483647&v=beta&t=8hq7Hhr_Vlu6uIXpTU9yv31n6jB0_zBzvuFqHmHGwlg" alt=""></div>
+            <div id="change">change</div>
+
+    </div>
+
+    </div>
+    
+    <script>
+        const plus = document.querySelector('#div1')
+        const minus = document.querySelector('#div3')
+        const p = document.querySelector("#p")
+        const hide = document.getElementById("hide");
+         const img = document.getElementById("img");
+         const one = document.getElementById("one");
+           const change = document.getElementById("change");
+        var  count = 0 ;
+     
+
+        plus.addEventListener('click',()=>{
+           if(count === 10){
+                    alert('max limit')
+            }
+            p.innerHTML = count++;
+            
+        })
+        minus.addEventListener("click",()=>{
+             if(count === -1){
+                    alert('min limit')
+            }
+            p.innerHTML = count--;
+            
+        })
+            hide.addEventListener('click',()=>{
+                    img.style.opacity ="0"
+            })
+              change.addEventListener('click',()=>{
+                    one.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXD3fx-zOcsGmgFIgBFL1LMxMc0Yh3Uowwcw&s"
+            })
+    </script>
+</body>
+</html>
